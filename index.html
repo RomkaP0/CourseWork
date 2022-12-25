@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>A Basic HTML5 Template</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <img class="brand" src="resources/High%20play-1.jpg">
+    <div class="toggle-btn">
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="links-container">
+        <li class="links-item"><a href="#home-section" class="link active">home</a></li>
+        <li class="links-item"><a href="#item-section" class="link">item</a></li>
+        <li class="links-item"><a href="#contact-section" class="link">contact</a></li>
+    </ul>
+    <div class="order_cart">
+        <a class="cart_btn">Cart</a>
+        <span class="total-count">0</span>
+    </div>
+
+</nav>
+
+<div class="container" id="catrContId">
+    <div class="shopping-cart">
+        <div class="shopping-cart-header">
+            <span class="lighter-text" id="TotalCount">Total: 0</span>
+            <div class="shopping-cart-total">
+                <span class="lighter-text">Cost:</span>
+                <span class="main-color-text" id="TotalCost">0р</span>
+            </div>
+        </div> <!--end shopping-cart-header -->
+
+        <ul class="shopping-cart-items" id="shopping-cart-items">
+
+        </ul>
+
+        <a class="button" id="Checkout" style="cursor: pointer">Checkout</a>
+    </div> <!--end shopping-cart -->
+</div> <!--end container -->
+
+<section class="home" id="home-section">
+    <div class="hero-content">
+        <h1 class="hero-heading"><span class="highlight">Hi, </span>High play team is in touch</h1>
+        <p class="info">Наша задача - обеспечить высочайший уровень вашего рабочего процесса или игры, какой бы она ни
+            была. Воспользуйтесь конфигуратором ниже, чтобы выбрать то, что подойдет именно вам!
+        </p>
+        <a href="#contact-section" class="btn">contact</a>
+    </div>
+</section>
+
+
+<!-- item section -->
+<section class="item" id="item-section">
+    <h2 class="heading">item<span class="highlight">s</span></h2>
+    <p class="sub-heading">Выберите платформу для дальнейшей кастомизации </p>
+    <div class="seperator"></div>
+    <div class="filters">
+        <button class="filter-btn active" id="all">all</button>
+        <button class="filter-btn" id="PC">PC</button>
+        <button class="filter-btn" id="Beginner">Beginner</button>
+        <button class="filter-btn" id="Middle">Middle</button>
+        <button class="filter-btn" id="Extremal">Extremal</button>
+    </div>
+    <div class="item-container">
+
+    </div>
+</section>
+<!-- contact form -->
+<section class="contact" id="contact-section">
+    <h2 class="heading">Contact<span class="highlight"> me</span></h2>
+    <p class="sub-heading">Lorem ipsum dolor sit amet consectetur. </p>
+    <div class="seperator"></div>
+    <div class="contact-form">
+        <div class="name">
+            <input type="text" class="first-name" required placeholder="first name" id="first-name">
+            <input type="text" class="last-name" required placeholder="last name" id="second-name">
+        </div>
+        <input type="email" required class="email" placeholder="email">
+        <textarea class="message" placeholder="message" required></textarea>
+        <button class="btn contact-btn" id="btn_contact">contact</button>
+    </div>
+</section>
+
+
+<!-- Несколько модальных окон -->
+
+<div class="modal" data-modal="1">
+    <!--   Svg иконка для закрытия окна  -->
+    <div class="conf_container">
+
+    </div>
+
+    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+    </svg>
+    <footer class="customizer-footer">
+        <span class="buy-price">Итого: 500000р</span>
+        <button class="btn buy-btn" id="btn_buy">Add to cart</button>
+    </footer>
+</div>
+
+<!-- Подложка под модальным окном -->
+<div class="overlay js-overlay-modal"></div>
+
+
+<footer>
+    <div class="footer-site">
+        <div class="row">
+            <img class="social-link" src="resources/vk-pngrepo-com.png" onclick="window.location='https://vk.com/roman_p0lyanskiy'">
+            <img class="social-link" src="resources/pngwing.com.png" onclick="window.location='https://youtube.com'">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+
+        <div class="row">
+            <ul>
+                <li><a href="#contact-section">Contact us</a></li>
+                <li><a href="#item-section">Items</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            INFERNO Copyright © 2022 High Play - All rights reserved || Designed By: Roman Polyanskiy
+        </div>
+    </div>
+</footer>
+
+
+<script src="item.js"></script>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+</body>
+</html>
+
