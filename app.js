@@ -324,18 +324,18 @@ function cartUpdate() {
     localStorage.setItem("CART", JSON.stringify(cart))
 }
 
-//перерисовка субпараметров
-// function renderSubtotal() {
-//     let totalPrice = 0, totalItems = 0
-//
-//     cart.forEach(item => {
-//         totalPrice += item.numbersInCart * Number(item.cost.slice(0, item.cost.length - 1))
-//         totalItems += item.numbersInCart
-//     })
-//     document.getElementById("TotalCount").innerHTML = 'Total ' + totalItems
-//     document.getElementById("TotalCost").innerHTML = totalPrice + "р"
-//     document.querySelector('.total-count').innerHTML = cart.length.toString()
-// }
+// перерисовка субпараметров
+function renderSubtotal() {
+    let totalPrice = 0, totalItems = 0
+
+    cart.forEach(item => {
+        totalPrice += item.numbersInCart * Number(item.cost.slice(0, item.cost.length - 1))
+        totalItems += item.numbersInCart
+    })
+    document.getElementById("TotalCount").innerHTML = 'Total ' + totalItems
+    document.getElementById("TotalCost").innerHTML = totalPrice + "р"
+    document.querySelector('.total-count').innerHTML = cart.length.toString()
+}
 
 //кнопки + и - в корзине
 function changeNumberOfUnits(action, id) {
